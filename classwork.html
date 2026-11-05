@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h2>A bank of your info.</h2>
+        <h4>put your important info for security</h4>
+        <button onclick="btn()">Click to store</button>
+        <button onclick="dlt()">delete previous data</button>
+    </center>  
+
+
+
+
+    <script>
+        let name = prompt('enter your name....');
+        let age = prompt('enter your age');
+        let marks = prompt('enter your marks......');
+     
+        function  btn(){
+
+
+    
+            localStorage.setItem('name',name);
+            localStorage.setItem('age',age);
+            localStorage.setItem('marks',marks);
+
+            let n = localStorage.getItem('name');
+            let a =  localStorage.getItem('age');
+            let m =  localStorage.getItem('marks');
+
+            console.log('n');
+                        console.log('a');
+                                    console.log('m');
+        }
+
+
+        function dlt(){
+            localStorage.removeItem('name');
+               localStorage.removeItem('age');
+                  localStorage.removeItem('marks');
+        }
+        
+    </script>
+</body>
+</html>
